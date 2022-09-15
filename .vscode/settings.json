@@ -1,0 +1,43 @@
+{
+    "java.import.gradle.home" : "C:\\openjdk-11+28_windows-x64_bin\\jdk-11",
+    "java.configuration.runtimes": [
+        {          
+          "name": "JavaSE-11",
+          "path": "C:\\openjdk-11+28_windows-x64_bin\\jdk-11",
+          "default": true,
+        }
+    ],
+    "java.debug.settings.hotCodeReplace": "auto",
+    "[java]": {
+        "editor.suggest.snippetsPreventQuickSuggestions": true
+    },
+
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.editorAssociations": {
+        "*.class": "default"
+    },
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:jni+resolve=off",
+
+    "java.configuration.updateBuildConfiguration": "automatic",
+    
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.test.config": [
+        {
+            "name": "myConfiguration",
+            "workingDirectory": "${workspaceFolder}",
+            "vmargs": ["-Xms512M", "-Dspfing.profiles.active=local"],
+            "env": {"key":"value"},
+            "sourcePaths": ["src/test/**"],
+            "classPaths": ["src/test/resources"]
+
+        }
+    ]
+}
