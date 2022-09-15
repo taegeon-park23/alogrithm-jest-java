@@ -14,7 +14,9 @@ dependencies {
 }
 
 test {
-	useJUnitPlatform()
+    useJUnitPlatform {
+        includeTags 'UNIT_TEST'
+    }
 	testLogging {
 		events "passed", "skipped", "failed"
 	}
