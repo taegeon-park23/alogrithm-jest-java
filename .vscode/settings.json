@@ -1,30 +1,42 @@
 {
-    "java.import.gradle.home" : "C:\\openjdk-11+28_windows-x64_bin\\jdk-11",
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
     "java.configuration.runtimes": [
-        {          
-          "name": "JavaSE-11",
-          "path": "C:\\openjdk-11+28_windows-x64_bin\\jdk-11",
-          "default": true,
+        {
+            "name": "JavaSE-11",
+            "path": "/usr/lib/jvm/java-11-openjdk-amd64",
+            "default": true
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "/usr/lib/jvm/java-17-openjdk-amd64"
         }
     ],
     "java.debug.settings.hotCodeReplace": "auto",
     "[java]": {
         "editor.suggest.snippetsPreventQuickSuggestions": true
     },
-
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
     "workbench.editorAssociations": {
         "*.class": "default"
     },
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:jni+resolve=off",
-
+    // "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\94101194\\.vscode\\extensions\\vscjava.vscode-lombok-1.0.1\\server\\lombok.jar\"",
     "java.configuration.updateBuildConfiguration": "automatic",
-    
+    "workbench.editor.enablePreview": false,
+    "editor.minimap.enabled": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
     "java.dependency.packagePresentation": "hierarchical",
-    "java.project.sourcePaths": ["src"],
+    "java.project.sourcePaths": [
+        "src"
+    ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
@@ -33,11 +45,19 @@
         {
             "name": "myConfiguration",
             "workingDirectory": "${workspaceFolder}",
-            "vmargs": ["-Xms512M", "-Dspfing.profiles.active=local"],
-            "env": {"key":"value"},
-            "sourcePaths": ["src/test/**"],
-            "classPaths": ["src/test/resources"]
-
+            "vmargs": [
+                "-Xmx512M",
+                "-Dspring.profiles.active=local"
+            ],
+            "env": {
+                "key": "value"
+            },
+            "sourcePaths": [
+                "src/test/**"
+            ],
+            "classPaths": [
+                "src/test/resources"
+            ]
         }
     ]
 }
