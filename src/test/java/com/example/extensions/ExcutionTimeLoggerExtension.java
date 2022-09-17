@@ -1,5 +1,7 @@
 package com.example.extensions;
 
+import java.util.logging.Logger;
+
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -11,6 +13,8 @@ import org.junit.jupiter.api.extension.ExtensionContext;
  * @author taegeon-park23
  */
 public class ExcutionTimeLoggerExtension implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
+
+    static final Logger logger = Logger.getLogger(ExcutionTimeLoggerExtension.class.getName());
 
     public static enum TimeType {
         START_TIME, END_TIME
@@ -36,7 +40,7 @@ public class ExcutionTimeLoggerExtension implements BeforeTestExecutionCallback,
         String testClassName = context.getRequiredTestClass().getName();
         String testName = context.getDisplayName();
 
-        System.out.println(String.format("Excuted {%s} [%d]ms", testClassName + "=:" + testName, duration));
+        logger.info(() -> String.format("Excuted {%s} [%d]ms", testClassName + "=:" + testName, duration));
     }
 
 }
