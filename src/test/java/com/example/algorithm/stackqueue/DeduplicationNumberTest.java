@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import com.example.extensions.ExcutionTimeLoggerExtension;
+import com.example.extensions.ExecutionTimeLoggerExtension;
 
-@ExtendWith(ExcutionTimeLoggerExtension.class)
+@ExtendWith(ExecutionTimeLoggerExtension.class)
 class DeduplicationNumberTest {
 
     @Test
