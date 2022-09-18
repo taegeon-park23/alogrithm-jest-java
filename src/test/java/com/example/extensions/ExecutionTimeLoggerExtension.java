@@ -12,9 +12,9 @@ import org.junit.jupiter.api.extension.ExtensionContext;
  * 
  * @author taegeon-park23
  */
-public class ExcutionTimeLoggerExtension implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
+public class ExecutionTimeLoggerExtension implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
 
-    static final Logger logger = Logger.getLogger(ExcutionTimeLoggerExtension.class.getName());
+    static final Logger logger = Logger.getLogger(ExecutionTimeLoggerExtension.class.getName());
 
     public static enum TimeType {
         START_TIME, END_TIME
